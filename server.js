@@ -9,6 +9,7 @@ app.use(
         credentials: true,
     })
 )
+
 const bodyPaser = require('body-parser')
 app.use(bodyPaser.json())
 app.use(express.urlencoded({ extended: true }))
