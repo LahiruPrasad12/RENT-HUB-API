@@ -4,6 +4,15 @@ const exp = require("./server");
 const port = 3000;
 exp.use(express.json());
 mongoose.set("strictQuery", false);
+const app = express();
+var cors = require('cors');
+
+app.use(
+  cors({
+      origin: '*',
+      credentials: true,
+  })
+);
 
 const BASE_URL =
   "mongodb+srv://LahiruPrasad12:Lahiru12@cluster0.n1wciok.mongodb.net/?retryWrites=true&w=majority";

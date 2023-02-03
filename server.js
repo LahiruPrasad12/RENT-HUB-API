@@ -5,10 +5,10 @@ var cors = require('cors');
 
 app.use(
     cors({
-        origin: ["https://rent-hub-fe.vercel.app"],
+        origin: '*',
         credentials: true,
     })
-)
+);
 const bodyPaser = require('body-parser')
 app.use(bodyPaser.json())
 app.use(express.urlencoded({ extended: true }))
