@@ -9,7 +9,7 @@ app.use(
         credentials: true,
     })
 )
-
+app.use(express.json({ limit: "10kb" }));
 const bodyPaser = require('body-parser')
 app.use(bodyPaser.json())
 app.use(express.urlencoded({ extended: true }))

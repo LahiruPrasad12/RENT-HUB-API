@@ -1,8 +1,8 @@
 const express = require("express");
 const mongoose = require("mongoose");
-const exp = require("./server");
+const app = require('./server');
 const port = 3000;
-exp.use(express.json());
+
 mongoose.set("strictQuery", false);
 
 const BASE_URL =
@@ -24,7 +24,7 @@ mongoose
     }
   );
 
-exp.listen(port, () => {
+app.listen(port, () => {
   console.log(`Rent-Hub Server Started..`);
 });
 
