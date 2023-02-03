@@ -5,7 +5,7 @@ var cors = require('cors');
 
 app.use(
     cors({
-        origin: ["https://rent-hub-fe.vercel.app/"],
+        origin: '*',
         credentials: true,
     })
 )
